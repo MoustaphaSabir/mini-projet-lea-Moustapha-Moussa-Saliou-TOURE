@@ -20,13 +20,9 @@ Les Objectifs :
     - section 2
     - ne pas commencer les autres pages avant d'avoir fini
 4. duppliquer la page boulangerie pour chocolaterie, patisserie...
-
-
-
-
-
-
-
+Il faut modifier la page boulangerie chocolaterie, patisserie...
+5. Faire le formulaire de contact . 
+- main 
 2. Réalisation de HTML:
         1. navigation
         2. header
