@@ -1,14 +1,33 @@
 Projet Boulangerie : Saliou & Moustapha
 Projet: Présentation d'une boulangerie : 
-Les Objectifs : Création des fichiers Html :
-a. Création du fichier html et configuration (titre et description)
-b. Création du fichier CSS
-c. Recuperation des images necessaires 
-d. Recuperations des fonts
-e.Création de l'architecture du projet (images, styles)
-f. Reset css
+Les Objectifs : 
+
+1. Création des fichiers Html :
+    a. Création du fichier html et configuration (titre et description)
+    b. Création du fichier CSS
+    c. Recuperation des images necessaires 
+    d. Recuperations des fonts
+    e.Création de l'architecture du projet (images, styles)
+    f. Reset css
+2. je fais la page d'accueil
+    - html, css 
+    - nav
+    - footer
+    - main
+3. faire la page boulangerie
+    - main
+    - section 1
+    - section 2
+    - ne pas commencer les autres pages avant d'avoir fini
+4. duppliquer la page boulangerie pour chocolaterie, patisserie...
+
+
+
+
+
+
+
 2. Réalisation de HTML:
-a. Création de la page d'accueil :
         1. navigation
         2. header
         3. footer
@@ -95,3 +114,4 @@ tous droits reservés et politique de confidentialité.
 
 
 
+taches
