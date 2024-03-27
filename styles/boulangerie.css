@@ -1,3 +1,7 @@
+
+*{
+    box-sizing: border-box;
+}
 body{
     background-size: cover!important;
     background-position: top!important;
@@ -104,9 +108,9 @@ hr{
  .images1intro img {
         display: block;
         max-width: 80%;     
-    }
+}
 
-h1 {
+h1, h2 {
     font-weight: 500px; 
     text-transform: capitalize ;
     font-size: 36px;
@@ -115,15 +119,9 @@ h1 {
     color: #492807;
     line-height: 1.1em;
     text-align: center;
-    }
-h2{
-    font-weight: 300px; 
-    text-transform: capitalize ;
-    font-size: 30px;
-    text-align: center;
-}
-.paragraphe{
-    font-size: 10px;
+ }
+p{
+    font-size: 15px;
     font-weight: 300px; 
     text-align: center;
 }
@@ -158,7 +156,12 @@ h2{
     margin-top: 10px;
     font-size: 14px;
     text-align: center;
-    margin-left: 50px;
+    margin-right: 200px;
+
+}
+strong{
+    color: #a80e7a;
+    font-size: 14px;
 }
 /* Section 2 */
 .section-2 {
