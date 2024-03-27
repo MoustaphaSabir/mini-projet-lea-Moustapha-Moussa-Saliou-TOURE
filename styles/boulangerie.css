@@ -1,0 +1,53 @@
+footer {
+    background-color: #a80e7a;
+    color: #fff;
+    padding: 20px 0;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.adresse, .horaires {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.adresse h3, .horaires h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.adresse p, .horaires p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.adresse, .horaires {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.boulangerie h4, .poitou h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.boulangerie p, .poitou p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.logo{
+   background-color: #a80e7a;
+   width: 200px;
+   height: 200px;
+   margin-right: 250px;
+}
