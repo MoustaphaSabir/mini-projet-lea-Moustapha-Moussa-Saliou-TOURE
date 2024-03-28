@@ -95,7 +95,6 @@ hr, strong {
     justify-content: center;
     margin-top: 80px;
     margin: 50px;
-    /* background-color: #a80e7a; */
 }
 .text {
     flex: 1;
@@ -123,13 +122,12 @@ h1, h2 {
     text-transform: capitalize ;
     font-size: 36px;
     font-weight: 300;
-    /* text-transform: uppercase; */
     color: #492807;
     line-height: 1.1em;
     text-align: center;
     font-family: "Roboto Serif", serif;
 }
-p{
+.paragraphe, p{
     font-family: "Roboto Serif", serif;
     font-size: 15px;
     font-weight: 300px; 
@@ -144,6 +142,7 @@ strong{
     text-align: center;
     padding: 20px;
     padding-top: 40px;
+    background-color: #a80e7a;
 }
 
 .imagesContenair1 {
