@@ -4,9 +4,6 @@ body{
     background-color:  #ffffff;
        
     }
-header{
-   
-}
 main{
     display: flex;
     width: 100%;
@@ -16,18 +13,12 @@ main{
 }
 img{
     width: 100%;
-
 }
 .contenairlien{
     display: flex;
     justify-content : space-around;
     margin-top: 20px;
     font-size: 30px;
-}
-.contenairlien :hover{
-    color: rgb(183, 22, 22);
-    transform: scale(1.2); 
-    
 }
 nav{
     align-self: center;
@@ -84,4 +75,7 @@ footer {
    width: 200px;
    height: 200px;
    margin-right: 250px;
+}
+.contact {
+    color: #8ed1fc;
 }
