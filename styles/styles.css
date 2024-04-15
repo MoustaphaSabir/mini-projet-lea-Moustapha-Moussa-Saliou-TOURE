@@ -41,7 +41,7 @@ footer {
 }
 
 .adresse h3, .horaires h3 {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
@@ -78,4 +78,7 @@ footer {
 }
 .contact {
     color: #8ed1fc;
+}
+.contact :hover{
+    color: rgb(202,248,128);
 }
