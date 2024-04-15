@@ -78,3 +78,8 @@ th, td {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: aquamarine;
 }
+
+/* .contact, h3 :hover{
+    color: rgb(202,248,128);
+    transform: scale(1.1);
+    /* font-weight: 500px;  */
