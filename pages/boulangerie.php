@@ -61,58 +61,31 @@
                 <p class="paragraphe">Les pains spéciaux permettent d’agrémenter les repas des grandes occasions ou simplement de varier les saveurs. Les pains suivants 
                 sont actuellement disponibles dans notre boulangerie d’Ymare :</p>
                 <div class="imagesContenair1">
-                    <?php
-                            
-                        // mysqli_close($connexion);
+                <?php
+                        
+                    // mysqli_close($connexion);
+                    // Exécuter une requête SELECT
+
+                        // Vérifier si la requête a réussi
                         // Exécuter une requête SELECT
+                    $sql = "SELECT * FROM produit INNER JOIN categorie ON categorie.id_categorie = produit.id_categorie 
+                    WHERE categorie.id_categorie = 2;
+                    ";
+                    
+                    $produits = mysqli_query($connexion, $sql);                
+                ?>
 
-                            // Vérifier si la requête a réussi
-                            // Exécuter une requête SELECT
-                        $sql = "SELECT * FROM boulangerie";
-                        $boulangeries = mysqli_query($connexion, $sql);                
-                    ?>
-
-                    <?php if($boulangeries) : ?>
-                        <?php foreach($boulangeries as $boulangerie) : ?>
-                            <figure>
-                                <img src="..<?php echo $boulangerie['url_image'] ?>" alt="<?= $boulangerie['titre_image'] ?>">
-                                <figcaption><strong><?= $boulangerie['titre_image'] ?></strong>
-                                <?= $boulangerie['description_image'] ?>
-                                </figcaption>
-                            </figure>
-                        <?php endforeach ?>
-                        <!-- fermeture du foreach -->
-                    <?php endif ?>
-                    <!-- <figure>
-                        <img src="/images/imagesBoulangerie/boulangerie_le-pavé-du-boulanger.jpg" alt="">
-                        <figcaption><strong>Le pavé du boulanger</strong>
-                            Farine de blé, farine de seigle, céréales et levain
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/images/imagesBoulangerie/boulangerie_le-maïs.jpg" alt="boulangerie_le-maïs">
-                        <figcaption><strong>Le pain du soleil</strong>
-                            Farine de blé, de maïs, graines de tournesol
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/images/imagesBoulangerie/boulangerie_le-nordik.jpg" alt="boulangerie_le-nordik">
-                            <figcaption><strong>Le pain 6 céréales</strong>
-                        Farine de blé, de seigle et d’avoine, mélange de graines
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/images/imagesBoulangerie/boulangerie_le-mueslie.jpg" alt="boulangerie_le-mueslie">
-                        <figcaption><strong>Le muesli</strong>
-                        Pain de mie avec un mélange de fruits secs et fruits confits
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/images/imagesBoulangerie/boulangerie_le-chia-peps.jpg" alt="boulangerie_le-chia-peps">
-                        <figcaption><strong>Le chia pep’s</strong>
-                            farine de blé, farine de maïs, graines de courge, de tournesol et de chia
-                        </figcaption>
-                    </figure> -->
+                <?php if($produits) : ?>
+                    <?php foreach($produits as $produit) : ?>
+                        <figure>
+                            <img src="..<?php echo $produit['url_image'] ?>" alt="<?= $produit['titre_image'] ?>">
+                            <figcaption><strong><?= $produit['titre_image'] ?></strong>
+                            <?= $produit['description_image'] ?>
+                            </figcaption>
+                        </figure>
+                    <?php endforeach ?>
+                    <!-- fermeture du foreach -->
+                <?php endif ?>
                 </div>
             </section>
             <section class="section-2">
@@ -121,31 +94,23 @@
                 <p>En plus de la baguette classique,
                     découvrez nos baguettes originales pour varier les saveurs</p>
             <div class="imagesContenair2">
-            <figure>
-                <img src="../images/imagesBaguettes/boulangerie_la-cesame (1).jpg" alt="boulangerie_la-cesame">
-                <figcaption><strong>La sésame</strong>
-                    Baguette de tradition roulée dans du sésame
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/imagesBaguettes/boulangerie_la-croustilliante.jpg" alt="boulangerie_la-croustilliante">
-                <figcaption><strong>La croustillante</strong>
-                    Baguette pétrie avec de la semoule de blé dur
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/imagesBaguettes/boulangerie_la-graine.jpg" alt="boulangerie_la-graine">
-                <figcaption><strong>La graine</strong>
-                    Baguette de tradition avec un mélange de graines
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/imagesBaguettes/boulangerie_la-cesame (1).jpg" alt="boulangerie_la-cesame">
-                <figcaption><strong>La pavot</strong><br>
-                    Baguette de tradition avec un mélange de graines
-                </figcaption>
-            </figure>
-            </div>
+                <?php
+                $sql = "SELECT * FROM produit INNER JOIN categorie ON categorie.id_categorie = produit.id_categorie 
+                WHERE categorie.id_categorie = 3
+                ";
+                 $produits = mysqli_query($connexion, $sql); 
+                ?>
+                <?php if($produits) : ?>
+                        <?php foreach($produits as $produit) : ?>
+                            <figure>
+                                <img src="..<?php echo $produit['url_image'] ?>" alt="<?= $produit['titre_image'] ?>">
+                                <figcaption><strong><?= $produit['titre_image'] ?></strong>
+                                <?= $produit['description_image'] ?>
+                                </figcaption>
+                            </figure>
+                        <?php endforeach ?>
+                        <!-- fermeture du foreach -->
+                <?php endif ?>
             </div>
          </section>
        </div>

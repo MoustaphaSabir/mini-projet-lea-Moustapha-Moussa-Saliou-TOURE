@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<?php
+    // Paramètres de connexion
+    $serveur = "localhost";
+    $utilisateur = "root";
+    $mot_de_passe = "";
+    $base_de_donnees = "boulangerie-patisserie";
+    // Établir la connexion
+    $connexion = mysqli_connect($serveur, $utilisateur,
+    $mot_de_passe, $base_de_donnees);
+    // Vérifier la connexion
+    if (!$connexion) {
+    die("Échec de la connexion : " . mysqli_connect_error());
+    } else {
+    echo "Connexion réussie à la base de données.";
+    }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +24,17 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/boulangerie.css">
     <title>Boulangerie</title>
+    <style>
+    main{
+            max-width: 1400px;
+            margin: 0 auto;
+            /* background-color: #603c07; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,37 +66,27 @@
             <p class="paragraphe">François Ovide, artisan boulanger-pâtissier, a réalisé un chocolat sur mesure en faisant assembler différentes origines de chocolats par notre fournisseur Cacao Barry. Ce mélange unique, également utilisé dans
                  certaines de nos pâtisseries, compose les bonbons au chocolat que vous trouverez en magasin.:</p>
             <div class="imagesContenair1">
-                <figure>
-                    <img src="/images/imagesChocolaterie/chocolaterie_tablette-praline-maison-v2.jpg" alt="Tablette">
-                    <figcaption><strong>Tablette praliné maison</strong>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/imagesChocolaterie/chocolaterie_rocher-pralines.jpg" alt="chocolaterie_rocher-pralines">
-                    <figcaption><strong>Rochers praliné</strong>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/imagesChocolaterie/chocolaterie_service3.jpg" alt="chocolaterie_service3">
-                    <figcaption><strong>chocolaterie service</strong>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/imagesChocolaterie/chocolaterie_ganache-framboise.jpg" alt="chocolaterie_ganache-framboise">
-                        <figcaption><strong>Ganache-framboise</strong>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/imagesChocolaterie/chocolaterie_orangettes_citronettes.jpg" alt="citronnette">
-                    <figcaption><strong>Orangettescitronettes</strong>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/imagesChocolaterie/twister-resize.jpg" alt="twister-resize">
-                    <figcaption><strong>Twister-resize</strong>
-                    </figcaption>
-                </figure>
-                </div>
+            <?php
+                // Vérifier si la requête a réussi
+                // Exécuter une requête SELECT
+                $sql = "SELECT * FROM produit INNER JOIN categorie ON categorie.id_categorie = produit.id_categorie 
+                WHERE categorie.id_categorie = 5;
+                ";
+                
+                $produits = mysqli_query($connexion, $sql);                
+            ?>
+
+            <?php if($produits) : ?>
+                <?php foreach($produits as $produit) : ?>
+                    <figure>
+                        <img src="..<?php echo $produit['url_image'] ?>" alt="<?= $produit['titre_image'] ?>">
+                        <figcaption><strong><?= $produit['titre_image'] ?></strong>
+                        <?= $produit['description_image'] ?>
+                        </figcaption>
+                    </figure>
+                <?php endforeach ?>
+                <!-- fermeture du foreach -->
+            <?php endif ?>
             </div>
          </section>
         <section class="section-2">
@@ -79,18 +95,25 @@
             <p>Découvrez nos confiseries maison ! Vous trouverez dans notre Boulangerie d’Ymare des bonbons de caramel mou et des tablettes de praliné maison, des pâtes de fruits,
                  des guimauves, réalisés maison par nos équipes.</p>
         <div class="imagesContenair2">
-        <figure>
-            <img src="/images/imagesConfesserie/chocolaterie_caramel-mou.jpg" alt="chocolaterie_caramel-mou">
-            <figcaption><strong>caramel-mou</strong>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="/images/imagesConfesserie/Pate de fruit2.jpg" alt="Pate de fruit">
-            <figcaption><strong>Pate de fruit</strong>
-            </figcaption>
-        </figure>
-         </div>
-        </div>
+        <?php
+            $sql = "SELECT * FROM produit INNER JOIN categorie ON categorie.id_categorie = produit.id_categorie 
+                WHERE categorie.id_categorie = 6;
+                ";
+                
+                $produits = mysqli_query($connexion, $sql);                
+        ?>
+
+            <?php if($produits) : ?>
+                <?php foreach($produits as $produit) : ?>
+                    <figure>
+                        <img src="..<?php echo $produit['url_image'] ?>" alt="<?= $produit['titre_image'] ?>">
+                        <figcaption><strong><?= $produit['titre_image'] ?></strong>
+                        <?= $produit['description_image'] ?>
+                        </figcaption>
+                    </figure>
+                <?php endforeach ?>
+                <!-- fermeture du foreach -->
+            <?php endif ?> 
        </section>
     </main>
     <footer>

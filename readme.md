@@ -107,7 +107,41 @@ Notre équipe est disponible pour répondre à vos questions dans les plus bref 
 Footer: dans lequel se trouve le contact, l'adresse, les heures d'ouverture et fermeture, le logo.
 tous droits reservés et politique de confidentialité.
 
+Deuxieme partie : 
+
+ &Front-End
+
+1:  Modification des liens 
+2 : Ajout un lien logo BOULANGERIE-PATISSERIE
+
+3 : Mettre toutes les images dans un Bloc
+4 : Ajout du  RESPONSIVE 
+ 
+5:  Ajout des animations CSS : Utilisation des transitions, 
+    des transformations et des animations CSS pour rendre les éléments du site Boulangerie  plus interactifs et attrayants.
+
+5 : Ajout  JavaScript pour des interactions utilisateur:
+  Implémentez des fonctionnalités interactives telles que des diaporamas d'images, 
+  des menus déroulants, des formulaires de contact en temps réel,
+
+6 : Intégrer des effets de défilement parallaxe .
+
+7: Incorporer des carrousels  & des galeries d'images interactives .
+  
+8 : Utilisation  des vidéos ou des animations : Intégration  des vidéos ou des animations 
+
+   &Back-end
+
+&&: Créer un base de données "boulangerie-patisserie.
+Creer un compte admin
+7:  Gerer un COMPTE UTILISATEUR avec la base de bases de données MSQL.
+  Creer un compte  : Stocker les clients fideles dans la BDD12 Dynamiser les donneés Boulangeriel , patisserie  depuis la Bases de données BDD
+8 : Ajoute desd paniers 
+9 : Recuperer  API externes : pour afficher en temps réel, telles que les prévisions météorologiques, les actualités en PHP.
+10 :Mise en œuvre d'un système de commentaires ou de réactions en temps réel.
+11 :Personnaliser le contenu en fonction de l'utilisateur : Utilisez des cookies ou 
+des sessions pour personnaliser le contenu du site en fonction du comportement (PHP).
 
 
-
-taches
+    payement en ligne: 
+14 :Ajouter des fonctionnalités de commerce électronique : pour permettre aux utilisateurs de faire des achats directement depuis le site. 
